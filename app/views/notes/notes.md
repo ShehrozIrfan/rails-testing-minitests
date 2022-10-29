@@ -20,3 +20,25 @@
   `assert_select 'title', 'Hello World'`
   `assert_select 'a[href=?]', home_path, count: 2`
 - There are still a lot of things we can do with `assert_select`, visit documentation for more.
+
+### `assert`
+
+- Use `assert` to check for truthy
+- Example:
+  `assert @user.valid?`
+- It will return true if the user is valid
+
+### `assert_not`
+
+- Use `assert` to check for falsy
+- Example:
+  `assert_not @user.valid?`
+- It will return true if the user is invalid
+
+### `assert_equal`
+
+- Use `assert_equal` to check for equality
+- Example:
+  `email = 'hello@gmail.com'`
+  `assert_equal email, @user.email`
+- It will return true when the `email` and `@user.email` are equal/same
